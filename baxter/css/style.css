@@ -1,7 +1,5 @@
-
 .main-wrapper {
   width: 1024px;
-  height: 1800px;
   margin: 0 auto;
 }
 
@@ -9,12 +7,12 @@
 
 .main-header {
   position: relative;
-  padding-top: 70px;
+  padding-bottom: 70px;
   text-align: center;
   overflow: hidden;
 }
 
-.main-content::before {
+.main-header::before {
   content: "";
   display: block;
   width: 100%;
@@ -30,7 +28,7 @@
 
 .main-header__faq {
   position: absolute;
-  top: -18px;
+  top: -2px;
   right: 43px;
   width: 82px;
   height: 164px;
