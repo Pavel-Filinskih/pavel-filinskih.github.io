@@ -1,3 +1,4 @@
+
 .main-wrapper {
   width: 1024px;
   margin: 0 auto;
@@ -103,7 +104,6 @@
 
 .services {
   margin-bottom: 20px;
-  padding: 20px 0 20px 0;
 }
 
 .services::after {
@@ -116,13 +116,50 @@
   position: relative;
   width: 300px;
   float: left;
-  padding-top: 13px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+.support--blue {
   background-image: url(../img/icon_peoples.png);
   background-repeat: no-repeat;
   background-position: 270px 10px;
   background-color: #2c789c;
+}
+
+.support--yellow {
+  background-image:url(../img/icon_plan.png);
+  background-repeat: no-repeat;
+  background-position: 270px 10px;
+  background-color: #e5b00d;
+}
+
+.support--green {
+  background-image: url(../img/icon_check.png);
+  background-repeat: no-repeat;
+  background-position: 270px 10px;
+  background-color: #97ba15;
+}
+
+.icon-yellow::before {
+  content: "";
+  position: absolute;
+  top: 53px;
+  left: 0;
+  width: 24px;
+  height: 50px;
+  background-image: url(../img/arrow_1.png);
+  background-repeat: no-repeat;
+}
+
+.icon-blue::before {
+  content: "";
+  position: absolute;
+  top: 53px;
+  left: 0;
+  width: 25px;
+  height: 51px;
+  background-image: url(../img/arrow_2.png);
+  background-repeat: no-repeat;
 }
 
 .support__title {
@@ -141,111 +178,6 @@
 .support__link {
   display: block;
   margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 16px;
-  font-family: Arial sans-serif;
-  text-decoration: none;
-  background-color: #fff;
-  color: #525252;
-  cursor: pointer;
-}
-
-.assured {
-  position: relative;
-  width: 300px;
-  float: left;
-  padding-top: 13px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-image:url(../img/icon_plan.png);
-  background-repeat: no-repeat;
-  background-position: 270px 10px;
-  background-color: #e5b00d;
-}
-
-.assured::before {
-  content: "";
-  position: absolute;
-  top: 53px;
-  left: 0;
-  width: 24px;
-  height: 50px;
-  background-image: url(../img/arrow_1.png);
-  background-repeat: no-repeat;
-}
-
-.assured__title {
-  padding-bottom: 10px;
-  font-size: 19px;
-  font-family: Arial sans-serif;
-  color: #fff;
-}
-
-.assured__description {
-  font-size: 16px;
-  font-family: Arial sans-serif;
-  color: #fff;
-}
-
-.assured__link {
-  display: block;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 16px;
-  font-family: Arial sans-serif;
-  text-decoration: none;
-  background-color: #fff;
-  color: #525252;
-  cursor: pointer;
-}
-
-.focus {
-  position: relative;
-  width: 300px;
-  float: left;
-  padding-top: 13px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-image: url(../img/icon_check.png);
-  background-repeat: no-repeat;
-  background-position: 270px 10px;
-  background-color: #97ba15;
-}
-
-.focus::before {
-  content: "";
-  position: absolute;
-  top: 53px;
-  left: 0;
-  width: 25px;
-  height: 51px;
-  background-image: url(../img/arrow_2.png);
-  background-repeat: no-repeat;
-}
-
-.focus__title {
-  padding-bottom: 10px;
-  font-size: 19px;
-  font-family: Arial sans-serif;
-  color: #fff;
-}
-
-.focus__description {
-  font-size: 16px;
-  font-family: Arial sans-serif;
-  color: #fff;
-}
-
-.focus__link {
-  display: block;
-  margin-top: 12px;
-  margin-bottom: 12px;
   padding: 10px;
   border-radius: 10px;
   text-align: center;
@@ -638,37 +570,39 @@
 }
 
 .footer-social__item {
-  float: right;
-  height: 22px;
-  margin-left: 5px;
+  float: left;
+  margin-left: 20px;
   background-repeat: no-repeat;
+}
+
+.footer-social__item:first-child {
+  margin-left: 0;
 }
 
 .footer-social__link {
   display: block;
-  height: 22px;
   cursor: pointer;
 }
 
-.icon-one {
+.icon-dig {
   width: 21px;
   height: 22px;
   background-image: url(../img/icon_social_1.png);
 }
 
-.icon-two {
+.icon-pig {
   width: 28px;
   height: 22px;
   background-image: url(../img/icon_social_2.png);
 }
 
-.icon-third {
+.icon-twit {
   width: 21px;
   height: 21px;
   background-image: url(../img/icon_social_3.png);
 }
 
-.icon-four {
+.icon-media {
   width: 61px;
   height: 22px;
   background-image: url(../img/icon_social_4.png);
