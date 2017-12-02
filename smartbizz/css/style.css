@@ -1,0 +1,262 @@
+body {
+  background-color: #eaeaea;
+}
+
+.main-wrapper {
+  width: 920px;
+  margin: 0 auto;
+}
+
+.main-header {
+  overflow: hidden;
+}
+
+.main-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: block;
+  float: left;
+  width: 350px;
+  height: 103px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 0 22px;
+}
+
+.nav-main {
+  float: right;
+  margin-top: 20px;
+}
+
+.nav-main__item {
+  float: left;
+}
+
+.nav-main__link {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: 17px;
+  font-family: Arial,sans-serif;
+  text-decoration: none;
+  background-color: #2d91a7;
+  color: #fff;
+}
+
+.nav-main__link:hover {
+  background-color: #c5a923;
+}
+
+.darts {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: url(../img/darts.png);
+  background-repeat: no-repeat;
+  background-position: 0 17px;
+}
+
+.darts__title {
+  position: absolute;
+  top: 115px;
+  right: 16px;
+  width: 396px;
+  text-align: left;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.darts__title span {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: Arial,sans-serif;
+  color: #000;
+}
+
+.darts__link-more {
+  position: absolute;
+  top: 260px;
+  right: 205px;
+  padding: 14px 22px 14px 22px;
+  border-radius: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  background-color: #469eb0;
+  color: #fff;
+}
+
+.gallery {
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 1px 0px 1px 0px #cfcfcf;
+  background-color: #fefefe;
+  overflow: hidden;
+}
+
+.gallery-section {
+  float: left;
+  width: 220px;
+  background-repeat: no-repeat;
+}
+
+.gallery-section__title {
+  margin-bottom: 15px;
+  color: #318ea2;
+  font: bold 13px Arial, sans-serif;
+}
+
+.gallery-section__pict {
+  display: block;
+  margin: 0 auto;
+}
+
+.gallery-section__description {
+  margin-top: 15px;
+  font: 13px Arial, sans-serif;
+  color: #323232;
+  overflow: hidden;
+}
+
+.gallery-section__link {
+  display: block;
+  width: 17px;
+  height: 17px;
+  margin-top: 15px;
+  background-image: url(../img/linkBg.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.solutions {
+  padding: 36px 43px 40px 36px;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 1px 0px 1px 0px #cfcfcf;
+  background-color: #fefefe;
+}
+
+.solutions::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.business {
+  width: 510px;
+  float: left;
+  margin-right: 40px;
+}
+
+.business::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.projects {
+  width: 291px;
+  float: left;
+}
+
+.business__title {
+  margin-bottom: 30px;
+  font: bold 28px Arial, sans-serif;
+  color: #000;
+}
+
+.business__description {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font: 13px Arial, sans-serif;
+  color: #323232;
+}
+
+.company {
+  padding-left: 130px;
+  background-image: url(../img/inbusinessBg.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.company__description {
+  margin-bottom: 20px;
+}
+
+.business__list {
+  float: left;
+  margin-right: 53px;
+}
+
+.business__link {
+  display: block;
+  font: 13px Arial, sans-serif;
+  color: #308da2;
+}
+
+.business__item {
+  margin-bottom: 5px;
+  padding-left: 16px;
+  background-image: url(../img/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+}
+
+.project-icon_1 {
+  margin-bottom: 34px;
+  padding-left: 112px;
+  background-image:url(../img/p1.png);
+  background-repeat: no-repeat;
+  background-position: 0 7px;
+}
+
+.project-icon_2 {
+  margin-bottom: 34px;
+  padding-left: 112px;
+  background-image:url(../img/p2.png);
+  background-repeat: no-repeat;
+  background-position: 0 7px;
+}
+
+.project-icon_3 {
+  margin-bottom:0;
+  padding-left: 112px;
+  background-image:url(../img/p3.png);
+  background-repeat: no-repeat;
+  background-position: 0 7px;
+}
+
+.projects__title {
+  padding-bottom: 30px;
+  font: bold 28px Arial, sans-serif;
+  color: #000;
+}
+
+.project-last__description {
+  margin-bottom: 18px;
+  font: 13px Arial, sans-serif;
+  color: #323232;
+}
+
+.project-last__link {
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-image: url(../img/linkBg2.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 27px 0 50px 0;
+  text-align: center;
+  font: 13px Arial, sans-serif;
+  color: #000;
+}
