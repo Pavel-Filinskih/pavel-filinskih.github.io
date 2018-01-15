@@ -1,0 +1,862 @@
+@font-face {
+  font-family: 'NewBaskervilleC';
+  src: url('../font/NewBaskervilleC.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NewBaskervilleC';
+  src: urlurl('../font/NewBaskervilleC.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url("../font/pt-sans.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url("../font/pt-sans-bold.ttf") format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: NewBaskervilleC, 'New York', Times, Georgia, serif;
+  color: #242526;
+  background-color: #eff2f7;
+}
+
+.wrapper-bg-header {
+  width: 100%;
+  background-color: #282a2d;
+}
+
+.wrapper-header-center {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.wrapper-filters-center {
+  max-width: 1260px;
+  /*padding-left: 90px;
+  padding-right: 90px;*/
+  margin: 0 auto;
+}
+
+.wrapper-catalog-center {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.wrapper-footer-center {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.wrapper-bg-footer {
+  width: 100%;
+  background-color: #282a2d;
+}
+
+.header-nav {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-bottom: 64px;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header-title {
+  display: inline-block;
+  width: 175px;
+  margin: 0;
+  padding-top: 12px;
+  padding-left: 20px;
+
+  font-size: 32px;
+  line-height: 17px;
+  color: #fff;
+}
+
+.header-title span {
+  font-family: PT Sans;
+  font-size: 11px;
+  line-height: 16px;
+  color: #ebf4ff;
+  opacity: 0.4;
+}
+
+.filters {
+  display: inline-block;
+  width: 480px;
+  margin-bottom: 20px;
+  font-size: 0;
+}
+
+.filters-list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+}
+
+.filters-item {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.filter-link {
+  margin-right: 25px;
+  font-family: 'PT Sans', arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #9fa2a8;
+}
+
+.filter-link:hover {
+  color: #242526;
+}
+
+.active-filter {
+  padding-bottom: 5px;
+  font-family: 'PT Sans', arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em; /* Photoshop 50/1000 = em */
+  border-bottom: 2px solid #242526;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #242526;
+}
+
+.catalog-countries {
+  display: flex;
+  margin-top: 20px;
+}
+
+.column-first {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-second {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-third {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.column-fourth {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.column-first,
+.column-second,
+.column-third {
+  margin-right: 20px;
+}
+
+.cuba-slider,
+.russia,
+.england,
+.norway,
+.switzerland,
+.china,
+.australia,
+.india,
+.germany,
+.japan,
+.finland,
+.zealand {
+  margin-bottom: 20px;
+}
+
+.russia-title,
+.england-title,
+.norway-title,
+.switzerland-title,
+.china-title,
+.australia-title,
+.india-title,
+.germany-title,
+.japan-title,
+.finland-title,
+.zealand-title {
+  font-size: 36px;
+  line-height: 17px;
+  font-weight: 500;
+}
+
+.icon-zoom::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 130px;
+  display: block;
+  width: 42px;
+  height: 42px;
+  background: url('../svg/icon_zoom.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.icon-play::after {
+  content: "";
+  position: absolute;
+  top: 70px;
+  left: 130px;
+  display: block;
+  width: 42px;
+  height: 42px;
+  background: url('../svg/icon_play.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+/* увеличенная фотка из слайдера */
+
+.overlay-show {
+  display: none;
+}
+
+.gallery-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+  overflow: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-overlay-close {
+  position: relative;
+}
+
+
+.gallery-overlay-close::after {
+  content: "";
+  position: absolute;
+  top: 115px;
+  left: 320px;
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: url('../svg/icon_close.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.5;
+  color: #fff;
+  cursor: pointer;
+}
+
+.gallery-overlay-preview {
+  display: inline-block;
+  margin: 150px 0;
+  background: #ffffff;
+}
+
+.gallery-overlay-image {
+  display: block;
+}
+
+/*  *****  */
+
+.cuba-slider {
+	position: relative;
+  background-color: #313336;
+}
+
+.cuba-slide {
+  display: none;
+	position: absolute;
+  width: 300px;
+  height: 200px;
+	overflow: hidden;
+}
+
+.cuba-slide--show {
+  display: block;
+  position: relative;
+}
+
+.cuba-slide__description {
+	float: left;
+	width: 300px;
+}
+
+.cuba-image {
+  filter: brightness(60%);
+}
+
+.cuba-slide__title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+	font-size: 36px;
+	line-height: 17px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.cuba-slide__title--center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.cuba-slide__title--small {
+  font-size: 24px;
+  line-height: 17px;
+}
+
+.cuba-slide__text {
+	max-height: 92px;
+  margin: 0;
+  padding: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  font-size: 14px;
+  line-height: 22px;
+	overflow: hidden;
+  color: #abaeb3;
+}
+
+/* кнопки переключения слайдера */
+
+.cuba-slider__control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.cuba-slider__btn-prev {
+  width: 21px;
+  height: 21px;
+  background: url(../svg/prev_slide.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.cuba-slider__btn-next {
+  width: 21px;
+  height: 21px;
+  background: url(../svg/next_slide.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.cuba-slider__btn-prev:hover,
+.cuba-slider__btn-next:hover {
+  opacity: 0.6;
+}
+
+.btn-prev {
+  width: 21px;
+  height: 21px;
+  background: url(../svg/prev_slide.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.btn-next {
+  width: 21px;
+  height: 21px;
+  background: url(../svg/next_slide.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  opacity: 0.6;
+}
+
+.russia {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.russia-image {
+  filter: brightness(60%);
+}
+
+.russia-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.russia-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.england {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.england-image {
+  filter: brightness(60%);
+}
+
+.england-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.england-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.norway {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.norway-image {
+  filter: brightness(60%);
+}
+
+.norway-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.norway-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.switzerland {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.switzerland-image {
+  filter: brightness(60%);
+}
+
+.switzerland-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.switzerland-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.australia {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.australia-image {
+  filter: brightness(60%);
+}
+
+.australia-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.australia-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.china {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.china-image {
+  filter: brightness(60%);
+}
+
+.china-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.china-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.india {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.india-image {
+  filter: brightness(60%);
+}
+
+.india-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.india-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.germany {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.germany-image {
+  filter: brightness(60%);
+}
+
+.germany-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.germany-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.japan {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.japan-image {
+  filter: brightness(60%);
+}
+
+.japan-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.japan-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.finland {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.finland-image {
+  filter: brightness(60%);
+}
+
+.finland-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.finland-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.zealand {
+  width: 300px;
+  position: relative;
+  font-size: 0;
+}
+
+.zealand-image {
+  filter: brightness(60%);
+}
+
+.zealand-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30% 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.zealand-control {
+  width: 60px;
+  height: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.column-latina {
+  position: relative;
+}
+
+.latina {
+  width: 620px;
+  position: absolute;
+  font-size: 0;
+}
+
+.latina-image {
+  filter: brightness(60%);
+}
+
+.latina-title {
+  position: absolute;
+  left: 43px;
+  top: 95px;
+
+  font-size: 36px;
+  line-height: 17px;
+  color: #fff;
+  z-index: 100;
+}
+
+.latina-list {
+  position: absolute;
+  left: 60px;
+  bottom: 60px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 20px;
+  line-height: 17px;
+  color: #fff;
+}
+
+.latina-list ol {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.latina-list ol:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  margin-top: 80px;
+  padding-top: 25px;
+  padding-bottom: 22px;
+  overflow: hidden;
+}
+
+.footer-copyring {
+  float: left;
+  font-size: 16px;
+  line-height: 17px;
+  color: #6b7076;
+}
+
+.footer-maker {
+  float: right;
+  margin: 0;
+  font-family: PT Sans;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6b7076;
+}
+
+.footer-maker span {
+  font-family: PT Sans;
+  font-size: 14px;
+  line-height: 17px;
+  color: #b5b9be;
+}
