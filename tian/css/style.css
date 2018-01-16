@@ -9,14 +9,6 @@ img {
   min-width: auto;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/*1280 - 108 (54 + 54) = 1172px*/
-
 .header-bg {
   position: relative;
   padding-left: 54px;
@@ -75,6 +67,7 @@ img {
 }
 
 .phone__text--black-color {
+  font-weight: 700;
   color: #080425;
 }
 
@@ -103,7 +96,7 @@ img {
   float: left;
   padding-top: 50px;
   padding-bottom: 40px;
-  padding-left: 99px;
+  padding-left: 57px;
   padding-right: 60px;
 }
 
@@ -132,6 +125,10 @@ img {
 }
 
 .email__link {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #fab91e;
+  font-weight: 700;
+  text-decoration: none;
   color: #080425;
 }
 
@@ -199,7 +196,7 @@ img {
   transition: .3s linear;
 }
 
-.top-menu__link--active::after {
+.icon-check::after {
   content: "";
   display: inline-block;
   width: 9px;
@@ -296,24 +293,48 @@ img {
   cursor: pointer;
 }
 
+.slide-info__link-btn:last-child {
+  margin-right: 0;
+}
+
 .slide-info__link-btn:hover {
   background-color: #d39500;
 }
 
 .slider__ico-btn {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 19px;
+  height: 12px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.slider__ico-btn--left {
+.slider__ico-btn--prev {
   top: 520px;
   left: 15px;
+  border: none;
+  outline: none;
+  background-image: url(../img/sprite_btns_slider.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
 }
 
-.slider__ico-btn--right {
+.slider__ico-btn--prev:hover {
+  background-position: 0px -12px;
+}
+
+.slider__ico-btn--next {
   top: 520px;
   right: 15px;
+  border: none;
+  outline: none;
+  background-image: url(../img/sprite_btns_slider.png);
+  background-repeat: no-repeat;
+  background-position: -19px 0px;
+}
+
+.slider__ico-btn--next:hover {
+  background-position: -19px -12px;
 }
 
 .slider-controls {
@@ -321,10 +342,6 @@ img {
   margin-bottom: 53px;
   margin-right: 100px;
   text-align: right;
-}
-
-.slider-controls__btn {
-
 }
 
 .slider-controls__toggle {
@@ -387,7 +404,7 @@ img {
   color: #080425;
 }
 
-.causes__box {
+.advantages__causes {
   overflow: hidden;
   text-align: center;
 }
@@ -513,10 +530,9 @@ img {
   color: #080425;
 }
 
-.services__box {
+.services__cards {
   overflow: hidden;
   box-sizing: content-box;
-  /*overflow: auto;*/
 }
 
 .service-card {
@@ -537,7 +553,7 @@ img {
 }
 
 .service-card__link-title {
-  width: 146px; /* 234px */
+  width: 146px;
   position: absolute;
   bottom: -5px;
   right: 29px;
@@ -566,7 +582,7 @@ img {
   left: 35px;
   padding: 21px;
   vertical-align: middle;
-  background-image: url('../img/ico_arrow_link.png');
+  background-image: url('../img/ico_btn_next.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #fab91e;
@@ -611,26 +627,136 @@ img {
   color: #080425;
 }
 
-.promo-nav {
+.lease-slider {
+  position: relative;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.lease-slider__pict {
+  float: left;
+}
+
+.lease-slider__info {
+  position: relative;
+  width: 540px;
+  float: left;
+  margin-top: 30px;
+  margin-left: -40px;
+  padding-top: 40px;
+  padding-bottom: 115px;
+  padding-left: 40px;
+  padding-right: 0;
+  background-color: #fff;
+}
+
+.lease-slider__info:before {
+  content: "";
+  position: absolute;
+  top: 105px;
+  width: 54px;
+  border: 1px solid #bfbfbf;
+  color: #bfbfbf;
+}
+
+.lease-slider__title {
+  margin-top: 0;
+  margin-bottom: 27px;
+  text-align: left;
+  font-size: 24px;
+  line-height: 24px;
+  color: #080425;
+}
+
+.lease-slider__description {
+  margin: 0;
+  margin-bottom: 23px;
+  margin-left: 123px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #080425;
+}
+
+.lease-slider__link-btn {
+  display: inline;
+  margin-left: 123px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 15px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: #fab91e;
+  color: #080425;
+  cursor: pointer;
+}
+
+.lease-slider__link-btn:hover {
+  background-color: #d39500;
+}
+
+.lease-slider__control {
+  position: absolute;
+  bottom: 20px;
+  left: 544px;
+  font-size: 0;
+  clear: both;
+  z-index: 10;
+}
+
+.lease-slider__btn-prev {
+  padding: 21px;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+  background-image: url('../img/ico_btn_prev.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fab91e;
+  cursor: pointer;
+}
+
+.lease-slider__btn-prev:hover {
+  background-color: #d39500;
+}
+
+.lease-slider__btn-next {
+  padding: 21px;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+  background-image: url('../img/ico_btn_next.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fab91e;
+  cursor: pointer;
+}
+
+.lease-slider__btn-next:hover {
+  background-color: #d39500;
+}
+
+.lease-nav {
   display: flex;
   margin-top: 100px;
   background-color: #fafafa;
 }
 
-.promo-nav__item {
+.lease-nav__link {
   position: relative;
   padding: 28px 349px 32px 38px;
   font-size: 16px;
   line-height: 24px;
   text-align: left;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   color: #080425;
   background-color: #fab91e;
   transition: all 0.3s;
 }
 
-.promo-nav__item::before {
+.lease-nav__link::before {
   content: "";
   position: absolute;
   top: 54px;
@@ -639,35 +765,21 @@ img {
   width: 15px;
   height: 10px;
   vertical-align: middle;
-  background-image: url('../img/ico_arrow_link.png');
+  background-image: url('../img/ico_btn_next.png');
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.promo-nav__item:hover {
+.lease-nav__link:hover {
   background-color: #d39500;
   transition: all 0.3s;
 }
 
-.promo-nav__item--toys {
-  transition: all 0.3s;
-  background-color: #fab91e;
-}
-
-.promo-nav__item--toys:hover {
-  background-color: #d39500;
-}
-
-.promo-nav__item-icon {
+.lease-nav__link-icon {
   position: absolute;
   opacity: 0.2;
   right: 36px;
   top: 24px;
-}
-
-.promo-nav__item-icon--toys {
-  right: 27px;
-  top: 23px;
 }
 
 .footer {
