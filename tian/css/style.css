@@ -20,6 +20,18 @@ img {
   background-size: cover;
 }
 
+.header-bg::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 17px;
+  height: 53px;
+  background-image: url(../img/ico_mouse.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .header-wrapper {
   max-width: 1280px;
   min-width: 320px;
