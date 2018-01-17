@@ -804,17 +804,15 @@ img {
 }
 
 .footer__copyring {
-  display: inline-block;
   float: left;
-  opacity: 0.4;
   margin: 0;
+  opacity: 0.4;
   font-size: 12px;
   line-height: 20px;
   color: #080425;
 }
 
 .footer-promo {
-  width: 285px;
   float: right;
   margin: 0;
 }
@@ -826,8 +824,10 @@ img {
 }
 
 .footer-promo__text {
-  opacity: 0.4;
+  display: block;
+  overflow: hidden;
   margin: 0;
+  opacity: 0.4;
   font-size: 12px;
   line-height: 16px;
   color: #080425;
