@@ -49,12 +49,25 @@ body {
   font: normal normal 62.5%/1em 'Source Sans Pro', sans-serif;
   font-size: 62.5%; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block; }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
 
 audio, canvas, video {
-  display: inline-block; }
-
+  display: inline-block;
+}
 
 .footer-logo,
 .footer-social {
@@ -78,7 +91,7 @@ audio, canvas, video {
   vertical-align: top;
   text-indent: -1999em;
 
-  background: url("/images/social-sprite.png") no-repeat;
+  background: url("../images/social-sprite.png") no-repeat;
   background-color: #808080;
   opacity: 0.6;
 }
@@ -86,8 +99,6 @@ audio, canvas, video {
 .footer-social-item:hover {
   opacity: 1;
 }
-
-
 
 .footer-social-item-instagram {
   background-position: -28px 0;
