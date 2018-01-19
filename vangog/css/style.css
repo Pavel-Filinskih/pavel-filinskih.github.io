@@ -355,11 +355,13 @@ img {
   text-align: right;
 }
 
-.slider-controls__toggle {
+.slider-controls__btn {
+  display: inline-block;
   width: 5px;
   height: 5px;
   margin-right: 20px;
   padding: 0;
+  vertical-align: middle;
   border: none;
   border-radius: 50%;
   background-color: rgb(159, 158, 159);
@@ -368,17 +370,21 @@ img {
   transition: all 0.2s linear;
 }
 
-.slider-controls__toggle:last-child {
+.slider-controls__btn--active {
+  width: 15px;
+  height: 15px;
+  background-image: url('../img/ico_slide_activ.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+.slider-controls__btn:last-child {
   margin-right: 0;
 }
 
-.slider-controls__toggle:hover {
+.slider-controls__btn:hover:not(.slider-controls__btn--active) {
   background-color: rgb(232, 132, 13);
-}
-
-.slider-controls__toggle--active {
-  background-color: #fff;
-  border: none;
 }
 
 .advantages {
