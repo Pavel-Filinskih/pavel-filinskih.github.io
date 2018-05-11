@@ -874,3 +874,32 @@ img {
 .footer-promo__link {
   color: #080425;
 }
+
+/* media */
+
+@media (max-width: 980px) {
+  .header-bg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-wrapper {
+    width: 940px;
+  }
+
+  .content-wrapper {
+    width: 940px;
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 544px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
